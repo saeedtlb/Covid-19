@@ -1,0 +1,15 @@
+// Essential styles
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  grid-template-columns: 10% 1fr 1fr 10%;
+}
+
+@import 'varriables';
+
+@import 'header';

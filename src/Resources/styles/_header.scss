@@ -1,0 +1,53 @@
+header {
+  .logo {
+    grid-column: 2/3;
+
+    img {
+      width: 63px;
+      height: 63px;
+      max-width: 100px;
+      max-height: 100px;
+      object-fit: cover;
+    }
+    h3 {
+      display: inline;
+      font-size: 22px;
+      color: $grass;
+      text-transform: uppercase;
+      padding: 5px;
+      padding-left: 10px;
+      font-weight: bold;
+    }
+  }
+  nav {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-link {
+      font-size: 18px;
+      text-transform: capitalize;
+      color: $grass;
+      transition: all 0.3s ease-in;
+
+      &::after {
+        content: '.';
+        display: block;
+        // position: absolute;
+        list-style-type: disc;
+        opacity: 0;
+        transition: all 0.3s ease-in;
+      }
+
+      &:hover {
+        color: $virus;
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    .contact {
+      @include button(false, $virus);
+    }
+  }
+}
