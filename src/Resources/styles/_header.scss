@@ -1,7 +1,27 @@
-header {
-  .logo {
-    grid-column: 2/3;
+.landing {
+  grid-column: 2;
+  height: 90vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    72deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 232, 232, 1) 100%
+  );
+}
 
+header {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+
+  .nav {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    position: relative;
     img {
       width: 63px;
       height: 63px;
@@ -15,14 +35,18 @@ header {
       color: $grass;
       text-transform: uppercase;
       padding: 5px;
-      padding-left: 10px;
+      padding-left: 20px;
+      white-space: nowrap;
       font-weight: bold;
+      position: absolute;
+      bottom: -7px;
     }
   }
   nav {
-    grid-column: 3/4;
+    width: 40%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .nav-link {
       font-size: 18px;
@@ -30,23 +54,25 @@ header {
       color: $grass;
       transition: all 0.3s ease-in;
 
-      &::after {
-        content: '.';
-        display: block;
-        // position: absolute;
-        list-style-type: disc;
-        opacity: 0;
-        transition: all 0.3s ease-in;
-      }
+      //   &::after {
+      //     content: '.';
+      //     display: block;
+      //     // position: absolute;
+      //     list-style-type: disc;
+      //     opacity: 0;
+      //     transition: all 0.3s ease-in;
+      //   }
 
-      &:hover {
-        color: $virus;
-        &::after {
-          opacity: 1;
-        }
-      }
+      //   &:hover {
+      //     color: $virus;
+      //     &::after {
+      //       opacity: 1;
+      //     }
+      //   }
     }
     .contact {
+      text-transform: capitalize;
+      width: 100px;
       @include button(false, $virus);
     }
   }

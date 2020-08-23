@@ -1,18 +1,19 @@
 // varriables
-$grass: '#035755';
-$virus: '#FB4C47';
+$grass: #035755;
+$virus: #fb4c47;
 
 // mixins
 @mixin button($fill, $color: $virus) {
   padding: 10px 20px;
   text-align: center;
-  font-weight: bold;
-  border-radius: 50%;
+  font-weight: 600;
+  border-radius: 30px;
 
   @if $fill == true {
     background: $color;
     color: #fff;
   } @else {
     border: 2px solid $color;
+    color: $color;
   }
 }
