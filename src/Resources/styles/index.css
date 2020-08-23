@@ -59,6 +59,32 @@ a {
   color: #fff;
 }
 
+header .logo, footer .logo {
+  position: relative;
+}
+
+header .logo img, footer .logo img {
+  width: 63px;
+  height: 63px;
+  max-width: 100px;
+  max-height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .logo h3, footer .logo h3 {
+  display: inline;
+  font-size: 22px;
+  color: #035755;
+  text-transform: uppercase;
+  padding: 5px;
+  padding-left: 20px;
+  white-space: nowrap;
+  font-weight: bold;
+  position: absolute;
+  bottom: -7px;
+}
+
 header {
   margin-top: 25px;
   display: -ms-grid;
@@ -74,32 +100,6 @@ header .nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-header .logo {
-  position: relative;
-}
-
-header .logo img {
-  width: 63px;
-  height: 63px;
-  max-width: 100px;
-  max-height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-header .logo h3 {
-  display: inline;
-  font-size: 22px;
-  color: #035755;
-  text-transform: uppercase;
-  padding: 5px;
-  padding-left: 20px;
-  white-space: nowrap;
-  font-weight: bold;
-  position: absolute;
-  bottom: -7px;
 }
 
 header nav {
@@ -247,5 +247,68 @@ header nav .contact {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+footer {
+  margin: 100px 10% 50px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 2fr 300px;
+      grid-template-columns: 300px 2fr 300px;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .logo {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+footer ul {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: capitalize;
+  list-style-type: none;
+  color: #035755;
+}
+
+footer .logo + ul {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  width: 600px;
+  font-size: 22px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+footer p {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
 }
 /*# sourceMappingURL=index.css.map */

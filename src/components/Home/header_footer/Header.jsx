@@ -1,13 +1,12 @@
 import React from 'react';
 
+import Brand from '../../utils/Brand.jsx';
+
 const Header = () => {
   return (
     <header>
       <div className="nav">
-        <div className="logo">
-          <img src="/images/logo.png" alt="virus-logo" />
-          <h3>covid-19</h3>
-        </div>
+        <Brand />
         <nav>
           <a href="#overview" className="nav-link">
             overview

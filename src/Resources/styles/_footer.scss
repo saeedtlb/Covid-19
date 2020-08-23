@@ -1,0 +1,40 @@
+footer {
+  margin: 100px 10% 50px auto;
+  display: grid;
+  grid-template-columns: 300px 2fr 300px;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    grid-row: 1;
+    grid-column: 1;
+    @extend %logo;
+  }
+  ul {
+    grid-row: 1;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    list-style-type: none;
+    color: $grass;
+  }
+
+  .logo + ul {
+    grid-row: 1;
+    grid-column: 2/3;
+    width: 600px;
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  p {
+    grid-row: 2;
+    grid-column: 2/3;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+  }
+}

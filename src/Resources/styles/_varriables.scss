@@ -49,3 +49,26 @@ $virus: #fb4c47;
     @include button(true);
   }
 }
+
+%logo {
+  position: relative;
+  img {
+    width: 63px;
+    height: 63px;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+  }
+  h3 {
+    display: inline;
+    font-size: 22px;
+    color: $grass;
+    text-transform: uppercase;
+    padding: 5px;
+    padding-left: 20px;
+    white-space: nowrap;
+    font-weight: bold;
+    position: absolute;
+    bottom: -7px;
+  }
+}
