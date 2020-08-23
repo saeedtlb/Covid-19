@@ -18,25 +18,15 @@ a {
       grid-template-columns: 10% 1fr;
 }
 
-.landing {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  height: 90vh;
-  background: white;
-  background: linear-gradient(72deg, white 0%, #ffe8e8 100%);
-}
-
 header {
   margin-top: 25px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 1fr 10%;
-      grid-template-columns: 10% 1fr 10%;
+  -ms-grid-columns: 1fr 10%;
+      grid-template-columns: 1fr 10%;
 }
 
 header .nav {
-  -ms-grid-column: 2;
-  grid-column: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,5 +91,37 @@ header nav .contact {
   border-radius: 30px;
   border: 2px solid #fb4c47;
   color: #fb4c47;
+}
+
+.landing {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  height: 90vh;
+  background: white;
+  background: linear-gradient(72deg, white 0%, #ffe8e8 100%);
+}
+
+.home {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.home .illustration {
+  width: 877px;
+  height: 712px;
+  background: url("/images/Illustration01.png") no-repeat;
+  background-size: contain;
+  background-position: center right;
+  position: absolute;
+  right: 0;
+}
+
+.home .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*# sourceMappingURL=index.css.map */

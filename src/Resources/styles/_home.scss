@@ -1,0 +1,29 @@
+.landing {
+  grid-column: 2;
+  height: 90vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    72deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 232, 232, 1) 100%
+  );
+}
+
+.home {
+  margin-top: 50px;
+  display: flex;
+  position: relative;
+
+  .illustration {
+    width: 877px;
+    height: 712px;
+    background: url('/images/Illustration01.png') no-repeat;
+    background-size: contain;
+    background-position: center right;
+    position: absolute;
+    right: 0;
+  }
+  .text {
+    flex: 1;
+  }
+}
