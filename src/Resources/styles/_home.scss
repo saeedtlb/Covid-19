@@ -13,6 +13,7 @@
   margin-top: 50px;
   display: flex;
   position: relative;
+  height: 70vh;
 
   .illustration {
     width: 877px;
@@ -25,5 +26,31 @@
   }
   .text {
     flex: 1;
+    text-transform: capitalize;
+    align-self: center;
+
+    div {
+      width: 30%;
+      color: $grass;
+      font-size: 32px;
+      line-height: 122%;
+      font-weight: bold;
+
+      span {
+        display: block;
+        color: $virus;
+      }
+    }
+
+    p {
+      width: 641px;
+      font-size: 22px;
+      line-height: 190%;
+    }
+
+    button {
+      border: none;
+      @include button(true);
+    }
   }
 }
