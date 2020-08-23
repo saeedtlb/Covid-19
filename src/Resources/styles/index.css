@@ -18,6 +18,47 @@ a {
       grid-template-columns: 10% 1fr;
 }
 
+.home .text, .about .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-transform: capitalize;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.home .text div, .about .text div {
+  color: #035755;
+  font-size: 32px;
+  line-height: 122%;
+  font-weight: bold;
+}
+
+.home .text div span, .about .text div span {
+  display: block;
+  color: #fb4c47;
+}
+
+.home .text p, .about .text p {
+  width: 40%;
+  font-size: 22px;
+  line-height: 190%;
+}
+
+.home .text button, .about .text button {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #fb4c47;
+  color: #fff;
+}
+
 header {
   margin-top: 25px;
   display: -ms-grid;
@@ -149,37 +190,43 @@ header nav .contact {
   right: 0;
 }
 
-.home .text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-transform: capitalize;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.about {
+  margin-top: 100px;
+  height: 70vh;
+  overflow: hidden;
 }
 
-.home .text div {
-  width: 30%;
-  color: #035755;
-  font-size: 32px;
-  line-height: 122%;
-  font-weight: bold;
+.about .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.home .text div span {
-  display: block;
-  color: #fb4c47;
+.about .description::before {
+  content: '';
+  width: 700px !important;
+  height: 500px !important;
+  background: url(/images/Group.png) no-repeat center;
+  background-size: cover;
+  margin-right: 200px;
 }
 
-.home .text p {
-  width: 641px;
-  font-size: 22px;
-  line-height: 190%;
+.about .text {
+  display: inline-block;
+  position: relative;
 }
 
-.home .text button {
-  border: none;
+.about .text p {
+  width: 500px;
+  margin-right: 0;
+}
+
+.about .text button {
+  width: 200px;
+  height: 50px;
   padding: 15px 30px;
   text-align: center;
   font-size: 20px;
@@ -188,6 +235,17 @@ header nav .contact {
   border-radius: 30px;
   cursor: pointer;
   background: #fb4c47;
-  color: #fff;
+  color: #fee6e5;
+}
+
+.about .text::after {
+  content: '';
+  width: 200px;
+  height: 400px;
+  background: url(/images/virus.png) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 /*# sourceMappingURL=index.css.map */

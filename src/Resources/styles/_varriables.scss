@@ -3,7 +3,7 @@ $grass: #035755;
 $virus: #fb4c47;
 
 // mixins
-@mixin button($fill, $color: $virus) {
+@mixin button($fill, $color: #fff, $bgcolor: $virus) {
   padding: 15px 30px;
   text-align: center;
   font-size: 20px;
@@ -13,10 +13,39 @@ $virus: #fb4c47;
   cursor: pointer;
 
   @if $fill == true {
-    background: $color;
-    color: #fff;
-  } @else {
-    border: 2px solid $color;
+    background: $bgcolor;
     color: $color;
+  } @else {
+    border: 2px solid $bgcolor;
+    color: $color;
+  }
+}
+
+%text {
+  flex: 1;
+  text-transform: capitalize;
+  align-self: center;
+
+  div {
+    color: $grass;
+    font-size: 32px;
+    line-height: 122%;
+    font-weight: bold;
+
+    span {
+      display: block;
+      color: $virus;
+    }
+  }
+
+  p {
+    width: 40%;
+    font-size: 22px;
+    line-height: 190%;
+  }
+
+  button {
+    border: none;
+    @include button(true);
   }
 }
