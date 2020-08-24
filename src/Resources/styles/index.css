@@ -59,6 +59,22 @@ a {
   color: #fff;
 }
 
+.title {
+  font-size: 24px;
+  text-align: center;
+  line-height: 100%;
+  margin-bottom: 80px;
+}
+
+.title h3 {
+  color: #fb4c47;
+}
+
+.title p {
+  width: 60%;
+  margin: 0 auto;
+}
+
 header .logo, footer .logo {
   position: relative;
 }
@@ -251,6 +267,7 @@ header nav .contact {
 
 footer {
   margin: 100px 10% 50px auto;
+  background-color: #fff9f9;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 300px 2fr 300px;
@@ -320,17 +337,6 @@ footer p {
 
 .container h2 {
   color: #035755;
-}
-
-.container .title {
-  font-size: 24px;
-  text-align: center;
-  line-height: 100%;
-  margin-bottom: 80px;
-}
-
-.container .title h3 {
-  color: #fb4c47;
 }
 
 .cards {

@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Layout from '../../HOC/layout.jsx';
+import Layout from '../../HOC/layout';
 
-import Home from './Home.jsx';
+import Home from './Home';
 import About from './About';
 import Contagion from './Contagion';
+import Symptomps from './Symptomps';
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
         <Home />
         <About />
         <Contagion />
+        <Symptomps />
       </Layout>
     </div>
   );

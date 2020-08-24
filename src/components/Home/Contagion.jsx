@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Title from '../utils/Title';
+
 const Contagion = () => {
   const cards = [
     {
@@ -36,14 +38,11 @@ const Contagion = () => {
 
   return (
     <div className="container">
-      <div className="title">
-        <h3>covid-19</h3>
-        <h2>contagion</h2>
-        <p>
-          Corona viruses are a type of virus. There are many different kinds,
-          and some cause disease. A newly identified type
-        </p>
-      </div>
+      <Title
+        header="contagion"
+        description="Corona viruses are a type of virus. There are many different kinds,
+            and some cause disease. A newly identified type"
+      />
       <div className="cards">{renderCards()}</div>
     </div>
   );

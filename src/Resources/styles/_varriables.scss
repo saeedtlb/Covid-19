@@ -50,6 +50,20 @@ $virus: #fb4c47;
   }
 }
 
+.title {
+  font-size: 24px;
+  text-align: center;
+  line-height: 100%;
+  margin-bottom: 80px;
+  h3 {
+    color: $virus;
+  }
+  p {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
 %logo {
   position: relative;
   img {
