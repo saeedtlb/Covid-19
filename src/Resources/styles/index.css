@@ -433,4 +433,44 @@ footer p {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+
+.orders .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 400px;
+  text-transform: capitalize;
+}
+
+.orders .content::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 100%;
+  background-color: turquoise;
+}
+
+.orders .content > div {
+  width: 40%;
+}
+
+.orders .content > div h1 {
+  color: #035755;
+}
+
+.orders .content > div h1 span {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #fb4c47;
+  color: #fee6e5;
+  margin-right: 15px;
+}
+
+.orders .content > div p {
+  line-height: 190%;
+}
 /*# sourceMappingURL=index.css.map */

@@ -6,6 +6,7 @@ import Home from './Home';
 import About from './About';
 import Contagion from './Contagion';
 import Symptomps from './Symptomps';
+import WhatToDo from './WhatToDo';
 
 const Landing = () => {
   return (
@@ -15,6 +16,7 @@ const Landing = () => {
         <About />
         <Contagion />
         <Symptomps />
+        <WhatToDo />
       </Layout>
     </div>
   );
