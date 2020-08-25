@@ -521,4 +521,14 @@ footer p {
 .orders .content .wrapper p {
   line-height: 190%;
 }
+
+.list {
+  padding: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-79.45%, #fffbfb), color-stop(105.35%, #fdfdfd));
+  background: linear-gradient(360deg, #fffbfb -79.45%, #fdfdfd 105.35%);
+  -webkit-box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
+  width: 30%;
+  height: 500px;
+}
 /*# sourceMappingURL=index.css.map */

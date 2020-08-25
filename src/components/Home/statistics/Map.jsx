@@ -1,15 +1,21 @@
 import React from 'react';
 
-// import { ReactComponent as WorldMap } from './world.svg';
 import World from './World.jsx';
 
 const Map = () => {
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        backgroundColor: '#fffdfd',
+      }}
+    >
       <div className="map">
         <World />
       </div>
-      <div className="list">list</div>
+      <div className="list"></div>
     </div>
   );
 };
