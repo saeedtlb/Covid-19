@@ -5,18 +5,50 @@
     height: 400px;
     text-transform: capitalize;
     margin-bottom: 60px;
+    // position: relative;
 
     &:nth-child(2n) {
       flex-direction: row-reverse;
     }
 
+    &:first-child {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: -17%;
+        bottom: 0;
+        width: 250px;
+        max-width: 250px;
+        height: 250px;
+        background: url('/images/greenVirus.png') no-repeat center;
+        background-size: contain;
+      }
+    }
+
+    &:last-child {
+      //   width: 80%;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        right: -5%;
+        top: 0;
+        width: 250px;
+        max-width: 250px;
+        height: 250px;
+        background: url('/images/twoVirus.png') no-repeat center;
+        background-size: contain;
+      }
+    }
+
     .pic {
-      width: 40%;
       min-width: 350px;
       background: {
-        repeat: no-repeat;
-        size: contain;
-        position: center;
+        repeat: no-repeat !important;
+        size: contain !important;
+        position: center !important;
       }
     }
 

@@ -49,7 +49,7 @@ const WhatToDo = () => {
     ));
 
   return (
-    <div className="container">
+    <div className="">
       <Title
         header="what should wee do"
         description="Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused"

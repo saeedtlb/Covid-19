@@ -452,12 +452,44 @@ footer p {
           flex-direction: row-reverse;
 }
 
-.orders .content .pic {
-  width: 40%;
-  min-width: 350px;
-  background-repeat: no-repeat;
+.orders .content:first-child {
+  position: relative;
+}
+
+.orders .content:first-child::before {
+  content: '';
+  position: absolute;
+  left: -17%;
+  bottom: 0;
+  width: 250px;
+  max-width: 250px;
+  height: 250px;
+  background: url("/images/greenVirus.png") no-repeat center;
   background-size: contain;
-  background-position: center;
+}
+
+.orders .content:last-child {
+  overflow: hidden;
+  position: relative;
+}
+
+.orders .content:last-child::after {
+  content: '';
+  position: absolute;
+  right: -5%;
+  top: 0;
+  width: 250px;
+  max-width: 250px;
+  height: 250px;
+  background: url("/images/twoVirus.png") no-repeat center;
+  background-size: contain;
+}
+
+.orders .content .pic {
+  min-width: 350px;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
 }
 
 .orders .content .wrapper {
