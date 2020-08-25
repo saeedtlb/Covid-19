@@ -7,6 +7,7 @@ import About from './About';
 import Contagion from './Contagion';
 import Symptomps from './Symptomps';
 import WhatToDo from './WhatToDo';
+import Map from './statistics/Map';
 
 const Landing = () => {
   return (
@@ -17,6 +18,7 @@ const Landing = () => {
         <Contagion />
         <Symptomps />
         <WhatToDo />
+        <Map />
       </Layout>
     </div>
   );
