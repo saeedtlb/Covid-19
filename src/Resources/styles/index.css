@@ -438,39 +438,55 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 400px;
   text-transform: capitalize;
+  margin-bottom: 60px;
 }
 
-.orders .content::after {
-  content: '';
-  display: block;
-  width: 300px;
-  height: 100%;
-  background-color: turquoise;
+.orders .content:nth-child(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
-.orders .content > div {
+.orders .content .pic {
   width: 40%;
+  min-width: 350px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
-.orders .content > div h1 {
+.orders .content .wrapper {
+  width: 40%;
+  position: relative;
+}
+
+.orders .content .wrapper div {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.orders .content .wrapper h1 {
   color: #035755;
 }
 
-.orders .content > div h1 span {
+.orders .content .wrapper h1 span {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  background-color: #fb4c47;
-  color: #fee6e5;
+  padding: 6px;
+  color: #fb4c47;
+  background-color: #fee6e5;
   margin-right: 15px;
 }
 
-.orders .content > div p {
+.orders .content .wrapper p {
   line-height: 190%;
 }
 /*# sourceMappingURL=index.css.map */

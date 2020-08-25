@@ -35,13 +35,16 @@ const WhatToDo = () => {
   const renderOrders = () =>
     orders.map((order, i) => (
       <div className="content" key={i}>
-        <div>
-          <h1>
-            <span>{numbersInTwoDigits(i + 1)}</span>
-            {order.title}
-          </h1>
-          <p>{order.description}</p>
+        <div className="wrapper">
+          <div>
+            <h1>
+              <span>{numbersInTwoDigits(i + 1)}</span>
+              {order.title}
+            </h1>
+            <p>{order.description}</p>
+          </div>
         </div>
+        <div className="pic" style={{ background: `url(${order.pic})` }}></div>
       </div>
     ));
 
