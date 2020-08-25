@@ -1,38 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import { reports } from '../../utils/misc';
 
 import World from './World.jsx';
 
 const Map = () => {
-  const countries = [
-    {
-      name: 'USA',
-      flag: 'skyblue',
-      number: '844652',
-    },
-    {
-      name: 'italy',
-      flag: 'lightgreen',
-      number: '2159612',
-    },
-    {
-      name: 'china',
-      flag: 'red',
-      number: '512052',
-    },
-  ];
+  const [countries, setCountries] = useState(["Cant't respond now"]);
 
-  const renderCountries = () =>
-    countries.map((country, i) => (
-      <div className="country" key={i}>
-        <div className="name">
-          <span style={{ backgroundColor: `${country.flag}` }}></span>
-          <span>{country.name}</span>
+  useEffect(() => {
+    const fetchApi = async () => {
+      console.log(await reports());
+    };
+    // console.log(countries);
+    fetchApi();
+  }, []);
+
+  const renderCountries = () => {
+    if (countries.length === 1) {
+      return (
+        <h1 style={{ color: 'red', textAlign: 'center' }}>{countries[0]}</h1>
+      );
+    } else {
+      countries.map((country, i) => (
+        <div className="country" key={i}>
+          <div className="name">
+            <span style={{ backgroundColor: `${country.flag}` }}></span>
+            <span>{country.name}</span>
+          </div>
+          <div className="amount">
+            {parseInt(country.number).toLocaleString()}
+          </div>
         </div>
-        <div className="amount">
-          {parseInt(country.number).toLocaleString()}
-        </div>
-      </div>
-    ));
+      ));
+    }
+  };
 
   return (
     <div
