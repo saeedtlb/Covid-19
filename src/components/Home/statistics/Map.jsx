@@ -24,6 +24,31 @@ const Map = () => {
     }));
   }, [countries]);
 
+  const generateFlag = (url, name, cases) => {
+    let color = '';
+    if (cases.length < 8 && parseInt(cases[0]) <= 2) {
+      color = '#99cc33';
+    } else if (cases.length < 8 && parseInt(cases[0]) <= 7) {
+      color = '#ffcc00';
+    } else {
+      color = '#cc3300';
+    }
+
+    const cBorder = document.querySelector(`path[data-name="${name}"]`);
+
+    if (cBorder) {
+      cBorder.style.fill = color;
+    }
+
+    if (url === '?') {
+      return <span className="unknown">?</span>;
+    } else {
+      return (
+        <span className="flag" style={{ background: `url(${url})` }}></span>
+      );
+    }
+  };
+
   const renderCountries = () => {
     if (countries.length === 1) {
       return (
@@ -35,11 +60,7 @@ const Map = () => {
       return countries.slice(range.start, end).map((country, i) => (
         <div className="country" key={i}>
           <div className="name">
-            <span
-              style={{ backgroundColor: `#${Math.floor(Math.random() * 999)}` }}
-            >
-              #{Math.floor(Math.random() * 999)}
-            </span>
+            {generateFlag(country.flag, country.country_name, country.cases)}
             <span>{country.country_name}</span>
           </div>
           <div className="amount">{country.cases}</div>
@@ -54,6 +75,17 @@ const Map = () => {
       (status === 'next' && range.start + 6 > range.end)
     ) {
       return;
+    }
+
+    const end = range.start + 6 >= range.end ? range.end : range.start + 6;
+    for (let i = range.start; i < end; i++) {
+      const cBorder = document.querySelector(
+        `path[data-name="${countries[i].country_name}"]`
+      );
+
+      if (cBorder) {
+        cBorder.style.fill = '#f2f2f2';
+      }
     }
 
     setRange((prev) => ({

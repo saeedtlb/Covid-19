@@ -1,12 +1,17 @@
+import { countries as codes } from './countryNames';
+
 require('dotenv').config();
 
 const filterCountries = (countries) => {
   const newArr = [];
-  console.log(countries);
+
   for (let i = 0; i < 51; i++) {
+    const cname = countries[i].country_name.replace(' ', '');
+    const cCode = codes[cname];
     const newCountry = {
       country_name: countries[i].country_name,
       cases: countries[i].cases,
+      flag: cCode ? `https://www.countryflags.io/${cCode}/shiny/64.png` : '?',
     };
     newArr.push(newCountry);
   }

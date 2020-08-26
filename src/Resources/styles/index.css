@@ -599,7 +599,7 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .list .countries .country .amount {
@@ -621,5 +621,23 @@ footer p {
   width: 50px;
   height: 35px;
   margin-right: 15px;
+}
+
+.list .countries .country .name .unknown {
+  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  background: #ff000040;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 20px;
+  color: black;
+  line-height: 35px;
+}
+
+.list .countries .country .name .flag {
+  height: 45px !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 /*# sourceMappingURL=index.css.map */
