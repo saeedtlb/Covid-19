@@ -39,16 +39,11 @@ export const reports = async () => {
 };
 
 export const colorStatus = (cases) => {
-  let color = '';
-  if (cases.length < 8 && parseInt(cases[0]) <= 2) {
-    color = '#99cc33';
-  } else if (cases.length < 8 && parseInt(cases[0]) <= 7) {
-    color = '#ffcc00';
-  } else {
-    color = '#cc3300';
+  if (cases.length <= 7) {
+    if (cases.length < 7 || parseInt(cases[0]) <= 2) return '#99cc33';
+    return '#ffcc00';
   }
-
-  return color;
+  return '#cc3300';
 };
 
 export const findEnd = (range) =>
