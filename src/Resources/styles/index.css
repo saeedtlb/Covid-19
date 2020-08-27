@@ -534,10 +534,14 @@ footer p {
 }
 
 .list .head {
-  margin-bottom: 30px;
+  height: 10%;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .list .head h2 {
@@ -590,6 +594,57 @@ footer p {
   background-color: tomato;
 }
 
+.list .countries {
+  height: 91%;
+}
+
+.list .countries .loader {
+  height: 100%;
+}
+
+.list .countries .loader h1 {
+  height: 10%;
+  margin-bottom: 0;
+}
+
+.list .countries .loader .dots {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list .countries .loader .dots span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  animation: load 1s alternate-reverse infinite;
+}
+
+@-webkit-keyframes load {
+  to {
+    -webkit-transform: translateX(36px);
+            transform: translateX(36px);
+  }
+}
+
+@keyframes load {
+  to {
+    -webkit-transform: translateX(36px);
+            transform: translateX(36px);
+  }
+}
+
 .list .countries .country {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -631,6 +686,7 @@ footer p {
   background: #ff000040;
   font-weight: bold;
   border-radius: 5px;
+  margin-top: 0;
   font-size: 20px;
   color: black;
   line-height: 35px;

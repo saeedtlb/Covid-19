@@ -8,8 +8,10 @@
   text-transform: capitalize;
 
   .head {
-    margin-bottom: 30px;
+    height: 10%;
+    margin-bottom: 20px;
     display: flex;
+    align-items: center;
     h2 {
       flex: 1;
       display: inline-block;
@@ -50,6 +52,10 @@
   }
 
   .countries {
+    height: 91%;
+
+    @import 'loader';
+
     .country {
       display: flex;
       justify-content: space-between;
@@ -76,6 +82,7 @@
           background: #ff000040;
           font-weight: bold;
           border-radius: 5px;
+          margin-top: 0;
           font-size: 20px;
           color: black;
           line-height: 35px;

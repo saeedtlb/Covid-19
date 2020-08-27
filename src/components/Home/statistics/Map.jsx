@@ -4,20 +4,21 @@ import { reports, colorStatus, findEnd } from '../../utils/misc';
 import { countries as codes } from '../../utils/countryNames';
 
 import World from './World.jsx';
+import Loader from '../../utils/Loader';
 
 const Map = () => {
   const ref = useRef(null);
-  const [countries, setCountries] = useState(["Cant't respond now"]);
+  const [countries, setCountries] = useState(['Wait for server']);
   const [range, setRange] = useState({
     start: 0,
     end: 0,
   });
 
-  useEffect(() => {
-    reports().then((res) => {
-      setCountries(res);
-    });
-  }, []);
+  //   useEffect(() => {
+  //     reports().then((res) => {
+  //       setCountries(res);
+  //     });
+  //   }, []);
 
   useEffect(() => {
     setRange((prev) => ({
@@ -43,7 +44,10 @@ const Map = () => {
   const renderCountries = () => {
     if (countries.length === 1)
       return (
-        <h1 style={{ color: 'red', textAlign: 'center' }}>{countries[0]}</h1>
+        <div className="loader">
+          <h1 style={{ color: 'red', textAlign: 'center' }}>{countries[0]}</h1>
+          <Loader />
+        </div>
       );
 
     const end = findEnd(range);
