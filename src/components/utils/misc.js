@@ -37,3 +37,19 @@ export const reports = async () => {
     return 'somthing went wrong';
   }
 };
+
+export const colorStatus = (cases) => {
+  let color = '';
+  if (cases.length < 8 && parseInt(cases[0]) <= 2) {
+    color = '#99cc33';
+  } else if (cases.length < 8 && parseInt(cases[0]) <= 7) {
+    color = '#ffcc00';
+  } else {
+    color = '#cc3300';
+  }
+
+  return color;
+};
+
+export const findEnd = (range) =>
+  range.start + 6 >= range.end ? range.end : range.start + 6;

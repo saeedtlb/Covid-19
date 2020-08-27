@@ -526,8 +526,8 @@ footer p {
   padding: 25px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(-79.45%, #fffbfb), color-stop(105.35%, #fdfdfd));
   background: linear-gradient(360deg, #fffbfb -79.45%, #fdfdfd 105.35%);
-  -webkit-box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
-          box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: -5px 0px 20px 16px rgba(0, 0, 0, 0.07);
+          box-shadow: -5px 0px 20px 16px rgba(0, 0, 0, 0.07);
   width: 25%;
   color: #035755;
   text-transform: capitalize;
@@ -576,6 +576,7 @@ footer p {
   display: inline-block;
   width: 48%;
   height: 100%;
+  line-height: 35px;
   background: #f8dfdf;
   color: #035755;
   border-radius: inherit;
@@ -639,5 +640,9 @@ footer p {
   height: 45px !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
+}
+
+.map .border {
+  fill: #2cf74075 !important;
 }
 /*# sourceMappingURL=index.css.map */

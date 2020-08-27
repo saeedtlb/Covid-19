@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-import { reports } from '../../utils/misc';
+import { reports, colorStatus, findEnd } from '../../utils/misc';
+import { countries as codes } from '../../utils/countryNames';
 
 import World from './World.jsx';
 
 const Map = () => {
+  const ref = useRef(null);
   const [countries, setCountries] = useState(["Cant't respond now"]);
   const [range, setRange] = useState({
     start: 0,
@@ -25,48 +27,36 @@ const Map = () => {
   }, [countries]);
 
   const generateFlag = (url, name, cases) => {
-    let color = '';
-    if (cases.length < 8 && parseInt(cases[0]) <= 2) {
-      color = '#99cc33';
-    } else if (cases.length < 8 && parseInt(cases[0]) <= 7) {
-      color = '#ffcc00';
-    } else {
-      color = '#cc3300';
-    }
+    const color = colorStatus(cases);
+    const ccode = codes[name.replace(' ', '')];
+    const border = ref.current.children[ccode];
 
-    const cBorder = document.querySelector(`path[data-name="${name}"]`);
+    if (border) border.style.fill = color;
 
-    if (cBorder) {
-      cBorder.style.fill = color;
-    }
-
-    if (url === '?') {
-      return <span className="unknown">?</span>;
-    } else {
-      return (
-        <span className="flag" style={{ background: `url(${url})` }}></span>
-      );
-    }
+    return url !== '?' ? (
+      <span className="flag" style={{ background: `url(${url})` }}></span>
+    ) : (
+      <span className="unknown">?</span>
+    );
   };
 
   const renderCountries = () => {
-    if (countries.length === 1) {
+    if (countries.length === 1)
       return (
         <h1 style={{ color: 'red', textAlign: 'center' }}>{countries[0]}</h1>
       );
-    } else {
-      const end = range.start + 6 >= range.end ? range.end : range.start + 6;
 
-      return countries.slice(range.start, end).map((country, i) => (
-        <div className="country" key={i}>
-          <div className="name">
-            {generateFlag(country.flag, country.country_name, country.cases)}
-            <span>{country.country_name}</span>
-          </div>
-          <div className="amount">{country.cases}</div>
+    const end = findEnd(range);
+
+    return countries.slice(range.start, end).map((country, i) => (
+      <div className="country" key={i}>
+        <div className="name">
+          {generateFlag(country.flag, country.country_name, country.cases)}
+          <span>{country.country_name}</span>
         </div>
-      ));
-    }
+        <div className="amount">{country.cases}</div>
+      </div>
+    ));
   };
 
   const fetchNew = (status) => {
@@ -77,16 +67,13 @@ const Map = () => {
       return;
     }
 
-    const end = range.start + 6 >= range.end ? range.end : range.start + 6;
-    for (let i = range.start; i < end; i++) {
-      const cBorder = document.querySelector(
-        `path[data-name="${countries[i].country_name}"]`
-      );
+    const end = findEnd(range);
+    countries.slice(range.start, end).forEach((country) => {
+      const ccode = codes[country.country_name.replace(' ', '')];
+      const border = ref.current.children[ccode];
 
-      if (cBorder) {
-        cBorder.style.fill = '#f2f2f2';
-      }
-    }
+      if (border) border.style.fill = '#f2f2f2';
+    });
 
     setRange((prev) => ({
       ...prev,
@@ -104,7 +91,7 @@ const Map = () => {
       }}
     >
       <div className="map">
-        <World />
+        <World ref={ref} />
       </div>
 
       <div className="list">

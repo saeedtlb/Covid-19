@@ -1,7 +1,7 @@
 .list {
   padding: 25px;
   background: linear-gradient(360deg, #fffbfb -79.45%, #fdfdfd 105.35%);
-  box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
+  box-shadow: -5px 0px 20px 16px rgba(0, 0, 0, 0.07);
 
   width: 25%;
   color: $grass;
@@ -34,6 +34,7 @@
         display: inline-block;
         width: 48%;
         height: 100%;
+        line-height: 35px;
         background: rgb(248, 223, 223);
         color: $grass;
         border-radius: inherit;
@@ -88,5 +89,11 @@
         }
       }
     }
+  }
+}
+
+.map {
+  .border {
+    fill: #2cf74075 !important;
   }
 }
