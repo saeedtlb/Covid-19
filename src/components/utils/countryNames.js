@@ -49,7 +49,6 @@ export const countries = {
   Colombia: 'CO',
   Comoros: 'KM',
   Congo: 'CG',
-  Congo: 'CD',
   CookIslands: 'CK',
   CostaRica: 'CR',
   Croatia: 'HR',
