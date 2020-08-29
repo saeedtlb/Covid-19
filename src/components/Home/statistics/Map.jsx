@@ -64,13 +64,19 @@ const Map = () => {
   };
 
   const fetchNew = (status) => {
-    if (
-      (status === 'prev' && range.start === 0) ||
-      (status === 'next' && range.start + 6 > range.end)
-    ) {
+    console.log('come');
+    if (status === 'prev' && range.start === 0) {
       return;
     }
 
+    if (status === 'next' && range.start + 6 > range.end) {
+      setRange((prev) => ({
+        ...prev,
+        start: -6,
+      }));
+    }
+
+    console.log(2, range);
     const end = findEnd(range);
     countries.slice(range.start, end).forEach((country) => {
       const ccode = codes[country.country_name.replace(' ', '')];
