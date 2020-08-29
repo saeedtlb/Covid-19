@@ -599,6 +599,8 @@ footer p {
 }
 
 .list .countries .loader {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100%;
 }
 
@@ -607,41 +609,80 @@ footer p {
   margin-bottom: 0;
 }
 
-.list .countries .loader .dots {
+.list .countries .wrapper {
+  width: 100%;
   height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
-.list .countries .loader .dots span {
-  width: 20px;
-  height: 20px;
+.list .countries .balls {
+  width: 300px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.list .countries .ball {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: greenyellow;
-  animation: load 1s alternate-reverse infinite;
+  background-color: tomato;
+  -webkit-animation: load 2s alternate infinite ease-in-out;
+          animation: load 2s alternate infinite ease-in-out;
+}
+
+.list .countries .ball:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  background-color: #fd2;
+}
+
+.list .countries .ball:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  background-color: #63e263;
 }
 
 @-webkit-keyframes load {
-  to {
-    -webkit-transform: translateX(36px);
-            transform: translateX(36px);
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(100px) rotateX(40deg);
+            transform: translateY(100px) rotateX(40deg);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes load {
-  to {
-    -webkit-transform: translateX(36px);
-            transform: translateX(36px);
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(100px) rotateX(40deg);
+            transform: translateY(100px) rotateX(40deg);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 

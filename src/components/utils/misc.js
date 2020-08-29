@@ -47,9 +47,3 @@ export const colorStatus = (cases) => {
 };
 
 export const findEnd = ({ start, end }) => (start + 6 >= end ? end : start + 6);
-
-// export const random = (range) => Math.floor(Math.random() * range + 1);
-export const random = (range) => {
-  console.log(range);
-  return Math.floor(Math.random() * 100 + 1);
-};
