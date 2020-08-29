@@ -8,7 +8,7 @@ import Loader from '../../utils/Loader';
 
 const Map = () => {
   const ref = useRef(null);
-  const [countries, setCountries] = useState(['Wait for server']);
+  const [countries, setCountries] = useState(['Loading...']);
   const [range, setRange] = useState({
     start: 0,
     end: 0,

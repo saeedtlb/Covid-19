@@ -46,5 +46,10 @@ export const colorStatus = (cases) => {
   return '#cc3300';
 };
 
-export const findEnd = (range) =>
-  range.start + 6 >= range.end ? range.end : range.start + 6;
+export const findEnd = ({ start, end }) => (start + 6 >= end ? end : start + 6);
+
+// export const random = (range) => Math.floor(Math.random() * range + 1);
+export const random = (range) => {
+  console.log(range);
+  return Math.floor(Math.random() * 100 + 1);
+};
