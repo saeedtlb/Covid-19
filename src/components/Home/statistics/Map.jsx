@@ -14,11 +14,11 @@ const Map = () => {
     end: 0,
   });
 
-  useEffect(() => {
-    reports().then((res) => {
-      setCountries(res);
-    });
-  }, []);
+  //   useEffect(() => {
+  //     reports().then((res) => {
+  //       setCountries(res);
+  //     });
+  //   }, []);
 
   useEffect(() => {
     setRange((prev) => ({
@@ -97,7 +97,9 @@ const Map = () => {
       style={{
         display: 'flex',
         justifyContent: 'space-between',
-        backgroundColor: '#fffdfd',
+        marginBottom: '0',
+        background:
+          'linear-gradient( 360deg, rgba(255, 241, 241, 0.5) 0%, rgba(255, 241, 241, 0) 108.69%)',
       }}
     >
       <div className="map">

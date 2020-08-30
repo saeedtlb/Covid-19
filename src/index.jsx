@@ -11,5 +11,3 @@ ReactDOM.render(
   </div>,
   document.getElementById('root')
 );
-
-// https://rapidapi.com/spamakashrajtech/api/corona-virus-world-and-india-data/details

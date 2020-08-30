@@ -47,3 +47,24 @@ export const colorStatus = (cases) => {
 };
 
 export const findEnd = ({ start, end }) => (start + 6 >= end ? end : start + 6);
+
+export const validate = (value) => {
+  let valid = true;
+  let error = 'Thanks for your registery';
+  const style = { color: '#53a653' };
+  const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
+
+  if (value.trim() === '') {
+    style.color = 'red';
+    valid = false;
+    error = 'Email can not be blank. Please fill it in.';
+  } else {
+    if (!email.test(value)) {
+      style.color = 'red';
+      valid = false;
+      error = 'Entered email is invalid';
+    }
+  }
+
+  return [valid, error, style];
+};
