@@ -4,8 +4,10 @@ header {
   grid-template-columns: 1fr 10%;
 
   .nav {
+    height: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .logo {
@@ -46,7 +48,7 @@ header {
         color: $virus;
       }
     }
-    .contact {
+    .contactBtn {
       text-transform: capitalize;
       width: 100px;
       @include button(false, $virus);

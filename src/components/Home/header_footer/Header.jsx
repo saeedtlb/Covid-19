@@ -20,7 +20,7 @@ const Header = () => {
           <a href="#prevention" className="nav-link">
             prevention
           </a>
-          <a href="#contact" className="contact">
+          <a href="#contact" className="contactBtn">
             contact
           </a>
         </nav>
