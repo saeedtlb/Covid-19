@@ -4,11 +4,18 @@
   min-height: 300px;
   height: 400px;
   padding-top: 40px;
+  font-family: 'Domine', serif;
   background: linear-gradient(
     rgba(255, 241, 241, 0.5) 0%,
     rgba(255, 241, 241, 0.1) 109%
   );
-  font-family: 'Domine', serif;
+
+  &::after {
+    content: '';
+    min-width: 200px;
+    background: url('/images/twoVirus01.png') no-repeat;
+    background-size: contain;
+  }
 
   .wrapper {
     width: 50%;

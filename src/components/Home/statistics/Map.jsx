@@ -14,11 +14,11 @@ const Map = () => {
     end: 0,
   });
 
-  //   useEffect(() => {
-  //     reports().then((res) => {
-  //       setCountries(res);
-  //     });
-  //   }, []);
+  useEffect(() => {
+    reports().then((res) => {
+      setCountries(res);
+    });
+  }, []);
 
   useEffect(() => {
     setRange((prev) => ({
