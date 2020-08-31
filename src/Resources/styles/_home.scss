@@ -71,9 +71,14 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .home .illustration {
-    width: 100%;
-    height: auto;
-    background-size: contain;
+  .home {
+    .illustration {
+      width: 100%;
+      height: auto;
+      background-size: contain;
+    }
+    .text {
+      width: 70%;
+    }
   }
 }

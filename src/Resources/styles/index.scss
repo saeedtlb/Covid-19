@@ -21,6 +21,24 @@ p {
   grid-template-columns: 10% 1fr;
 }
 
+@media only screen and (max-width: 550px) {
+  .text {
+    width: 90% !important;
+
+    div {
+      font-size: 24px !important;
+      text-align: initial !important;
+    }
+    p {
+      text-align: justify !important;
+    }
+    p,
+    button {
+      font-size: 18px !important;
+    }
+  }
+}
+
 @import 'varriables';
 
 @import 'header';

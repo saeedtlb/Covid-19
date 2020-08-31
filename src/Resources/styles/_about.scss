@@ -45,6 +45,7 @@
 @media only screen and (max-width: 1700px) {
   .about {
     .text {
+      position: static;
       p {
         width: 80%;
       }
@@ -53,7 +54,7 @@
         max-width: 120px;
         width: 120px;
         background-size: contain;
-        bottom: -180px;
+        bottom: -40px;
       }
     }
 
@@ -86,20 +87,12 @@
       margin: auto;
 
       &::before {
-        position: static;
-        width: auto;
+        width: auto !important;
         height: 100%;
         min-height: 300px;
       }
 
       .text {
-        position: static;
-        div {
-          text-align: center;
-        }
-        p {
-          width: auto;
-        }
         button {
           @include responsiveBtn;
         }
@@ -113,10 +106,14 @@
 
 @media only screen and (max-width: 980px) {
   .description {
-    margin: 0 !important;
-
     .text::after {
       display: none;
     }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .description {
+    width: 100% !important;
   }
 }

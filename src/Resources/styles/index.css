@@ -24,6 +24,23 @@ p {
       grid-template-columns: 10% 1fr;
 }
 
+@media only screen and (max-width: 550px) {
+  .text {
+    width: 90% !important;
+  }
+  .text div {
+    font-size: 24px !important;
+    text-align: initial !important;
+  }
+  .text p {
+    text-align: justify !important;
+  }
+  .text p,
+  .text button {
+    font-size: 18px !important;
+  }
+}
+
 .home .text, .about .text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -282,6 +299,9 @@ header nav .contactBtn {
     height: auto;
     background-size: contain;
   }
+  .home .text {
+    width: 70%;
+  }
 }
 
 .about {
@@ -343,6 +363,9 @@ header nav .contactBtn {
 }
 
 @media only screen and (max-width: 1700px) {
+  .about .text {
+    position: static;
+  }
   .about .text p {
     width: 80%;
   }
@@ -350,7 +373,7 @@ header nav .contactBtn {
     max-width: 120px;
     width: 120px;
     background-size: contain;
-    bottom: -180px;
+    bottom: -40px;
   }
   .about .description::before {
     width: 500px !important;
@@ -385,19 +408,9 @@ header nav .contactBtn {
     margin: auto;
   }
   .about .description::before {
-    position: static;
-    width: auto;
+    width: auto !important;
     height: 100%;
     min-height: 300px;
-  }
-  .about .description .text {
-    position: static;
-  }
-  .about .description .text div {
-    text-align: center;
-  }
-  .about .description .text p {
-    width: auto;
   }
   .about .description .text button {
     width: 40%;
@@ -413,11 +426,14 @@ header nav .contactBtn {
 }
 
 @media only screen and (max-width: 980px) {
-  .description {
-    margin: 0 !important;
-  }
   .description .text::after {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .description {
+    width: 100% !important;
   }
 }
 
@@ -560,6 +576,35 @@ footer p {
   }
 }
 
+@media only screen and (max-width: 460px) {
+  .logo img {
+    width: 40px !important;
+    height: 45px !important;
+  }
+  .logo h3 {
+    font-size: 18px !important;
+    padding: 3px !important;
+    padding-left: 12px !important;
+    bottom: -6px !important;
+  }
+  .logo + ul {
+    display: none;
+  }
+  footer {
+    text-align: center;
+    display: block;
+  }
+  footer .logo {
+    text-align: initial;
+  }
+  footer ul {
+    width: 100%;
+  }
+  footer p {
+    text-align: center;
+  }
+}
+
 .container {
   margin: 100px 10%;
   margin-left: 0;
@@ -649,6 +694,9 @@ footer p {
 }
 
 .cards .card .content div img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -669,6 +717,30 @@ footer p {
   background-size: cover;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 1200px) {
+  .cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cards .card:nth-child(2) {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards .card {
+    width: 50% !important;
+    margin-left: 0 !important;
+  }
 }
 
 .orders .content {

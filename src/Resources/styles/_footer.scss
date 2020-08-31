@@ -101,3 +101,36 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 460px) {
+  .logo {
+    img {
+      width: 40px !important;
+      height: 45px !important;
+    }
+    h3 {
+      font-size: 18px !important;
+      padding: 3px !important;
+      padding-left: 12px !important;
+      bottom: -6px !important;
+    }
+  }
+  .logo + ul {
+    display: none;
+  }
+  footer {
+    text-align: center;
+    display: block;
+
+    .logo {
+      text-align: initial;
+    }
+
+    ul {
+      width: 100%;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
