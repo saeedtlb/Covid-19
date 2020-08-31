@@ -1,6 +1,5 @@
 .about {
   margin-top: 170px;
-  height: 70vh;
   overflow: hidden;
 
   .description {
@@ -65,6 +64,59 @@
   }
 }
 
-// @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1355px) {
+  .description {
+    justify-content: flex-start !important;
 
-// }
+    .about &::before {
+      margin-right: 50px;
+    }
+    & .text::before {
+      right: 37px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .about {
+    position: relative;
+    .description {
+      flex-direction: column-reverse;
+      width: 60%;
+      margin: auto;
+
+      &::before {
+        position: static;
+        width: auto;
+        height: 100%;
+        min-height: 300px;
+      }
+
+      .text {
+        position: static;
+        div {
+          text-align: center;
+        }
+        p {
+          width: auto;
+        }
+        button {
+          @include responsiveBtn;
+        }
+        &::after {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .description {
+    margin: 0 !important;
+
+    .text::after {
+      display: none;
+    }
+  }
+}

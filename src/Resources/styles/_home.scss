@@ -1,22 +1,21 @@
 .landing {
   grid-column: 2;
-  height: 90vh;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    72deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 232, 232, 1) 100%
-  );
 }
 
 .home {
   margin-top: 50px;
   display: flex;
   position: relative;
-  height: 70vh;
+  height: 90vh;
+  background: linear-gradient(
+    72deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 232, 232, 1) 100%
+  );
 
   .illustration {
-    width: 877px;
+    width: 878px;
     height: 712px;
     background: url('/images/Illustration01.png') no-repeat;
     background-size: contain;
@@ -49,14 +48,13 @@
       width: 60%;
       margin-bottom: 25px;
 
-      div {
+      div,
+      p {
         text-align: center;
       }
 
       button {
-        width: 40%;
-        display: block;
-        margin: auto;
+        @include responsiveBtn;
       }
     }
 
@@ -69,5 +67,13 @@
         size: cover;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .home .illustration {
+    width: 100%;
+    height: auto;
+    background-size: contain;
   }
 }
