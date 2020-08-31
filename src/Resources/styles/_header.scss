@@ -55,3 +55,9 @@ header {
     }
   }
 }
+
+@media only screen and (max-width: 1500px) {
+  header nav {
+    width: 50%;
+  }
+}

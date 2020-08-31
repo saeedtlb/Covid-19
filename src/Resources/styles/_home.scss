@@ -28,3 +28,46 @@
     @extend %text;
   }
 }
+
+@media only screen and (max-width: 1700px) {
+  .home .text {
+    flex: none;
+    width: 35%;
+
+    p {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1458px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+      width: 60%;
+      margin-bottom: 25px;
+
+      div {
+        text-align: center;
+      }
+
+      button {
+        width: 40%;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .illustration {
+      position: static;
+      min-height: 400px;
+      margin-top: 20px;
+      background: {
+        position: center, top;
+        size: cover;
+      }
+    }
+  }
+}
