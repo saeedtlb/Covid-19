@@ -17,10 +17,10 @@ const Landing = () => {
         <Home />
         <About />
         <Contagion />
-        {/* <Symptomps />
-         <WhatToDo />
-         <Map />
-         <Contact /> */}
+        <Symptomps />
+        <WhatToDo />
+        <Map />
+        {/* <Contact /> */}
       </Layout>
     </div>
   );

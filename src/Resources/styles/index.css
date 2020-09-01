@@ -367,7 +367,7 @@ header nav .contactBtn {
     position: static;
   }
   .about .text p {
-    width: 80%;
+    width: auto;
   }
   .about .text::after {
     max-width: 120px;
@@ -404,7 +404,7 @@ header nav .contactBtn {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    width: 60%;
+    width: 80%;
     margin: auto;
   }
   .about .description::before {
@@ -645,6 +645,10 @@ footer p {
   z-index: 10;
 }
 
+.cards .card:nth-child(2) {
+  margin: auto 15px;
+}
+
 .cards .card::after {
   content: '';
   position: absolute;
@@ -741,6 +745,69 @@ footer p {
     width: 50% !important;
     margin-left: 0 !important;
   }
+  .cards .card:nth-child(2) {
+    margin: 15px 0 0 !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .title p {
+    width: 90%;
+  }
+  .cards::before {
+    display: none;
+  }
+  .cards .card {
+    width: 85% !important;
+    height: 350px;
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.11);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.11);
+  }
+  .cards .card .content p {
+    text-align: initial !important;
+  }
+  .cards .card .content h2 {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+}
+
+.symptomps {
+  width: 60%;
+  max-width: 80%;
+  margin: auto;
+}
+
+.symptomps img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .title h2 {
+    margin-top: 0;
+  }
+  .title h3 {
+    margin-bottom: 10px;
+  }
+  .title p {
+    width: 80% !important;
+    line-height: 120%;
+  }
+  .symptomps {
+    width: auto !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container .title p {
+    width: auto !important;
+    line-height: 150%;
+  }
+  .symptomps {
+    max-width: inherit;
+  }
 }
 
 .orders .content {
@@ -749,7 +816,6 @@ footer p {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 400px;
   text-transform: capitalize;
   margin-bottom: 60px;
 }
@@ -768,27 +834,24 @@ footer p {
 .orders .content:first-child::before {
   content: '';
   position: absolute;
-  left: -17%;
+  left: -12%;
   bottom: 0;
-  width: 250px;
-  max-width: 250px;
+  width: 123px;
   height: 250px;
   background: url("/images/greenVirus.png") no-repeat center;
   background-size: contain;
 }
 
 .orders .content:last-child {
-  overflow: hidden;
   position: relative;
 }
 
 .orders .content:last-child::after {
   content: '';
   position: absolute;
-  right: -5%;
+  right: 0;
   top: 0;
-  width: 250px;
-  max-width: 250px;
+  width: 87px;
   height: 250px;
   background: url("/images/twoVirus.png") no-repeat center;
   background-size: contain;
@@ -796,6 +859,7 @@ footer p {
 
 .orders .content .pic {
   min-width: 350px;
+  height: 350px;
   background-repeat: no-repeat !important;
   background-size: contain !important;
   background-position: center !important;
@@ -803,14 +867,6 @@ footer p {
 
 .orders .content .wrapper {
   width: 40%;
-  position: relative;
-}
-
-.orders .content .wrapper div {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .orders .content .wrapper h1 {
@@ -829,35 +885,81 @@ footer p {
 
 .orders .content .wrapper p {
   line-height: 190%;
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 1460px) {
-  .orders .content {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 150px;
+  .content {
+    display: block !important;
+    margin-right: 10%;
   }
-  .orders .content:last-child h1 {
+  .content:last-child h1 {
     margin-top: 70px;
   }
-  .orders .content .wrapper div {
-    position: static;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+  .content:last-child::after {
+    right: -11% !important;
   }
-  .orders .content .wrapper h1 {
+  .content .wrapper {
+    margin: auto;
+    width: 60% !important;
+    height: 100%;
+  }
+  .content .wrapper h1 {
     text-align: center;
   }
-  .orders .content .pic {
+  .content .pic {
     min-height: 300px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content:first-child::before {
+    left: -12% !important;
+    width: 85px !important;
+  }
+  .content:last-child::after {
+    top: 30% !important;
+    width: 65px !important;
+  }
+  .content .wrapper {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .toDo .title {
+    margin-right: 10%;
+  }
+  .toDo .title h2 {
+    margin: 20px 0;
+    font-size: 1.8em;
+    white-space: nowrap;
+  }
+  .toDo .title p {
+    margin: 0;
+    width: 90% !important;
+  }
+  .content:first-child::before {
+    display: none;
+  }
+  .content:last-child::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content .pic {
+    min-width: 200px !important;
+  }
+  .content .wrapper {
+    width: 100% !important;
+  }
+  .content .wrapper div h1 {
+    white-space: nowrap;
+    font-size: 26px;
+  }
+  .content .wrapper div p {
+    text-align: initial;
   }
 }
 
@@ -1080,6 +1182,12 @@ footer p {
 
 .map .border {
   fill: #2cf74075 !important;
+}
+
+@media only screen and (max-width: 1700px) {
+  .map {
+    display: block !important;
+  }
 }
 
 .contact {

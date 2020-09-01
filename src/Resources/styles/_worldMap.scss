@@ -104,3 +104,9 @@
     fill: #2cf74075 !important;
   }
 }
+
+@media only screen and (max-width: 1700px) {
+  .map {
+    display: block !important;
+  }
+}

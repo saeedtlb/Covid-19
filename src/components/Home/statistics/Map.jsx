@@ -93,7 +93,7 @@ const Map = () => {
 
   return (
     <div
-      className="container"
+      className="container map"
       style={{
         display: 'flex',
         justifyContent: 'space-between',

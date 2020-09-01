@@ -47,7 +47,7 @@
     .text {
       position: static;
       p {
-        width: 80%;
+        width: auto;
       }
 
       &::after {
@@ -83,7 +83,7 @@
     position: relative;
     .description {
       flex-direction: column-reverse;
-      width: 60%;
+      width: 80%;
       margin: auto;
 
       &::before {

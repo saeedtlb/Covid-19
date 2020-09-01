@@ -20,7 +20,7 @@ const World = React.forwardRef((props, ref) => (
       }}
       version="1.1"
       viewBox="0 0 2000 1001"
-      width={`${window.innerWidth / 2}px`}
+      width={window.innerWidth < 1700 ? '100%' : `${window.innerWidth / 2}px`}
       id="svg2"
       inkscapeversion="0.48.4 r9939"
       sodipodidocname="world.svg"

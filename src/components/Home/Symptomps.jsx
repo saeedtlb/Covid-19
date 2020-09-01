@@ -11,17 +11,7 @@ const Symptomps = () => {
         style={{ marginBottom: '0' }}
       />
       <div className="symptomps">
-        <img
-          src="/images/symptomps.png"
-          alt="symptomps"
-          style={{
-            display: 'block',
-            margin: '0 auto',
-            width: '60%',
-            maxWidth: '80%',
-            height: 'auto',
-          }}
-        />
+        <img src="/images/symptomps.png" alt="symptomps" />
       </div>
     </div>
   );
