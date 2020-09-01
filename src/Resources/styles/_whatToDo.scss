@@ -126,10 +126,13 @@
     }
     p {
       margin: 0;
-      width: 90% !important;
+      width: 100% !important;
     }
   }
   .content {
+    .wrapper {
+      width: 100% !important;
+    }
     &:first-child::before {
       display: none;
     }
@@ -157,5 +160,10 @@
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .toDo .title h2 {
+    font-size: 1.2em;
   }
 }

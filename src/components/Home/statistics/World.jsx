@@ -15,8 +15,7 @@ const World = React.forwardRef((props, ref) => (
       pretty_print="False"
       style={{
         strokeLinejoin: 'round',
-        stroke: 'rgba(0, 0, 0, 0.5)',
-        fill: '#AAE0FA',
+        stroke: '#00000080',
       }}
       version="1.1"
       viewBox="0 0 2000 1001"

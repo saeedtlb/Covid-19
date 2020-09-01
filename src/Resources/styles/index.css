@@ -419,6 +419,7 @@ header nav .contactBtn {
     padding: 0;
     display: block;
     margin: auto;
+    color: #fff;
   }
   .about .description .text::after {
     top: 0;
@@ -434,6 +435,13 @@ header nav .contactBtn {
 @media only screen and (max-width: 550px) {
   .description {
     width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about .description::before {
+    min-height: 240px;
+    margin: 0;
   }
 }
 
@@ -593,6 +601,7 @@ footer p {
   footer {
     text-align: center;
     display: block;
+    margin-top: 50px;
   }
   footer .logo {
     text-align: initial;
@@ -937,7 +946,10 @@ footer p {
   }
   .toDo .title p {
     margin: 0;
-    width: 90% !important;
+    width: 100% !important;
+  }
+  .content .wrapper {
+    width: 100% !important;
   }
   .content:first-child::before {
     display: none;
@@ -960,6 +972,12 @@ footer p {
   }
   .content .wrapper div p {
     text-align: initial;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .toDo .title h2 {
+    font-size: 1.2em;
   }
 }
 
@@ -1067,7 +1085,8 @@ footer p {
 }
 
 .list .countries .balls {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1077,8 +1096,8 @@ footer p {
 }
 
 .list .countries .ball {
-  width: 50px;
-  height: 50px;
+  width: 19%;
+  height: 55%;
   border-radius: 50%;
   background-color: tomato;
   -webkit-animation: load 2s alternate infinite ease-in-out;
@@ -1180,13 +1199,65 @@ footer p {
   background-repeat: no-repeat !important;
 }
 
-.map .border {
-  fill: #2cf74075 !important;
+.map div {
+  border-radius: 50%;
+  background-color: #a8cff1;
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 1700px) {
-  .map {
+  .world {
     display: block !important;
+    padding-bottom: 50px;
+  }
+  .world .list {
+    padding: 35px;
+    width: 50%;
+    margin: auto;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .world .map div {
+    background-color: inherit;
+  }
+  .world .map div svg {
+    width: 150%;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .world {
+    width: 90%;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .world .map {
+    display: none;
+  }
+  .world .list {
+    width: 90% !important;
+    padding: 20px !important;
+    -webkit-box-shadow: -3px 0px 12px 5px rgba(0, 0, 0, 0.07);
+            box-shadow: -3px 0px 12px 5px rgba(0, 0, 0, 0.07);
+  }
+  .world .list .head {
+    display: block;
+  }
+  .world .list .head h2 {
+    display: none;
+  }
+  .world .list .head .box {
+    width: auto;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .world .list .head .box span {
+    width: 40%;
   }
 }
 
@@ -1245,6 +1316,7 @@ footer p {
 }
 
 .contact .wrapper h1 {
+  white-space: nowrap;
   text-transform: capitalize;
   text-align: center;
   color: #035755;
@@ -1344,6 +1416,57 @@ footer p {
     -webkit-transform: translateY(-32px);
             transform: translateY(-32px);
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1340px) {
+  form {
+    height: 120px !important;
+    display: block !important;
+    padding: 0 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    background-color: initial !important;
+  }
+  form input[type='email'] {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    width: 100% !important;
+    height: 50%;
+    padding: 0 20px;
+  }
+  form input[type='submit'] {
+    display: block;
+    margin: 20px auto 0;
+    width: 80% !important;
+    padding: 0;
+    height: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact h1 {
+    font-size: 2.5em !important;
+  }
+  .contact::after {
+    display: none;
+  }
+  .contact .wrapper {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .contact .wrapper h1 {
+    font-size: 1.5em !important;
+  }
+  .contact form input[type='email'] {
+    font-size: 18px !important;
+    padding: 15px;
+  }
+  .contact form input[type='submit'] {
+    width: 160px !important;
+    font-size: 20px !important;
   }
 }
 /*# sourceMappingURL=index.css.map */

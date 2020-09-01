@@ -20,7 +20,7 @@ const Landing = () => {
         <Symptomps />
         <WhatToDo />
         <Map />
-        {/* <Contact /> */}
+        <Contact />
       </Layout>
     </div>
   );

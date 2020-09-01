@@ -95,6 +95,7 @@
       .text {
         button {
           @include responsiveBtn;
+          color: #fff;
         }
         &::after {
           top: 0;
@@ -115,5 +116,12 @@
 @media only screen and (max-width: 550px) {
   .description {
     width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about .description::before {
+    min-height: 240px;
+    margin: 0;
   }
 }

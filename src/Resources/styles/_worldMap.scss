@@ -100,13 +100,66 @@
 }
 
 .map {
-  .border {
-    fill: #2cf74075 !important;
+  div {
+    border-radius: 50%;
+    background-color: #a8cff1;
+    margin-bottom: 30px;
   }
 }
 
 @media only screen and (max-width: 1700px) {
-  .map {
+  .world {
     display: block !important;
+    padding-bottom: 50px;
+
+    .list {
+      padding: 35px;
+      width: 50%;
+      margin: auto;
+      height: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .world {
+    .map div {
+      background-color: inherit;
+      svg {
+        width: 150%;
+        transform: translateX(-20%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .world {
+    width: 90%;
+    margin: 0;
+    padding-bottom: 0;
+    .map {
+      display: none;
+    }
+    .list {
+      width: 90% !important;
+      padding: 20px !important;
+      box-shadow: -3px 0px 12px 5px rgba(0, 0, 0, 0.07);
+      .head {
+        display: block;
+        h2 {
+          display: none;
+        }
+        .box {
+          width: auto;
+          background: none;
+          box-shadow: none;
+
+          span {
+            width: 40%;
+          }
+        }
+      }
+    }
   }
 }

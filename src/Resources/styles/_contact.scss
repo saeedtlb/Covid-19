@@ -45,6 +45,7 @@
     }
 
     h1 {
+      white-space: nowrap;
       text-transform: capitalize;
       text-align: center;
       color: $grass;
@@ -110,5 +111,63 @@
   100% {
     transform: translateY(-32px);
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1340px) {
+  form {
+    height: 120px !important;
+    display: block !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background-color: initial !important;
+
+    input[type='email'] {
+      background-color: #e0e0e0;
+      border-radius: 20px;
+      width: 100% !important;
+      height: 50%;
+      padding: 0 20px;
+    }
+
+    input[type='submit'] {
+      display: block;
+      margin: 20px auto 0;
+      width: 80% !important;
+      padding: 0;
+      height: 50% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact {
+    h1 {
+      font-size: 2.5em !important;
+    }
+    &::after {
+      display: none;
+    }
+    .wrapper {
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .contact {
+    .wrapper h1 {
+      font-size: 1.5em !important;
+    }
+    form {
+      input[type='email'] {
+        font-size: 18px !important;
+        padding: 15px;
+      }
+      input[type='submit'] {
+        width: 160px !important;
+        font-size: 20px !important;
+      }
+    }
   }
 }
