@@ -8,13 +8,7 @@ const Footer = () => {
   return (
     <footer>
       <Brand />
-      <ul>
-        {renderLinks('li')}
-        {/* <li>overview</li>
-        <li>symptoms</li>
-        <li>prevention</li>
-        <li>treatment</li> */}
-      </ul>
+      <ul>{renderLinks('li')}</ul>
       <ul>
         <li>
           <img src="/images/social/facebook.png" alt="facebook" />
