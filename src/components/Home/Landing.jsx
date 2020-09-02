@@ -12,17 +12,15 @@ import Contact from './Contact';
 
 const Landing = () => {
   return (
-    <div className="landing">
-      <Layout>
-        <Home />
-        <About />
-        <Contagion />
-        <Symptomps />
-        <WhatToDo />
-        <Map />
-        <Contact />
-      </Layout>
-    </div>
+    <Layout>
+      <Home />
+      <About />
+      <Contagion />
+      <Symptomps />
+      <WhatToDo />
+      <Map />
+      <Contact />
+    </Layout>
   );
 };
 
