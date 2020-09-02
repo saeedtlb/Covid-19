@@ -149,11 +149,12 @@ header .nav {
 
 header .nav_list {
   display: none;
-  min-height: 400px;
-  height: 500px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
+  overflow: hidden;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 header nav {
@@ -227,8 +228,9 @@ header nav .contactBtn {
 @media only screen and (max-width: 1280px) {
   header {
     padding-top: 0;
-    min-height: 400px;
-    height: 500px;
+    height: 150px;
+    -webkit-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
   }
   header .nav {
     display: none !important;
@@ -247,10 +249,21 @@ header nav .contactBtn {
     height: 80%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-transform: translateY(-330px);
+            transform: translateY(-330px);
+    -webkit-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
   }
   header .nav_list nav a {
     font-size: 25px;
     letter-spacing: 2px;
+  }
+  header .nav_list nav a::after {
+    display: inline-block;
+    -webkit-transform: none;
+            transform: none;
+    left: -20px;
+    margin-top: 8px;
   }
 }
 

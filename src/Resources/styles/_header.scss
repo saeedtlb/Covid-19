@@ -13,9 +13,9 @@ header {
 
   .nav_list {
     display: none;
-    min-height: 400px;
-    height: 500px;
     grid-column: 1/3;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
   }
 
   .logo {
@@ -73,8 +73,8 @@ header {
 @media only screen and (max-width: 1280px) {
   header {
     padding-top: 0;
-    min-height: 400px;
-    height: 500px;
+    height: 150px;
+    transition: all 2s ease-in-out;
     .nav {
       display: none !important;
     }
@@ -88,10 +88,19 @@ header {
         flex-direction: column;
         height: 80%;
         justify-content: space-around;
+        transform: translateY(-330px);
+        transition: all 2s ease-in-out;
 
         a {
           font-size: 25px;
           letter-spacing: 2px;
+
+          &::after {
+            display: inline-block;
+            transform: none;
+            left: -20px;
+            margin-top: 8px;
+          }
         }
       }
     }

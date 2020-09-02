@@ -1,6 +1,6 @@
 .menu {
   display: none;
-  max-width: 125px;
+  height: 100%;
 }
 
 .menu input {
@@ -16,6 +16,8 @@
 
 .menu label {
   display: block;
+  height: 20%;
+  max-width: 125px;
   cursor: pointer;
 }
 
