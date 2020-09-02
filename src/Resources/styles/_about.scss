@@ -54,13 +54,16 @@
         max-width: 120px;
         width: 120px;
         background-size: contain;
-        bottom: -40px;
+        bottom: -45%;
       }
     }
 
-    & .description::before {
-      width: 500px !important;
-      background-size: contain;
+    & .description {
+      width: 90%;
+      &::before {
+        width: 500px !important;
+        background-size: contain;
+      }
     }
   }
 }

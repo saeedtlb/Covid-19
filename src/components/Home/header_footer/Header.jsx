@@ -1,29 +1,31 @@
 import React from 'react';
 
 import Brand from '../../utils/Brand.jsx';
+import Hamburger from '../../utils/Hamburger';
+import { render } from '@testing-library/react';
 
 const Header = () => {
+  const links = ['overview', 'contagion', 'symptoms', 'prevention', 'contact'];
+  const renderLinks = () =>
+    links.map((link) => (
+      <a
+        key={link}
+        href={`#${link}`}
+        className={link === 'contact' ? 'contactBtn' : 'nav-link'}
+      >
+        {link}
+      </a>
+    ));
+
   return (
     <header>
+      <div className="nav_list">
+        <Hamburger />
+        <nav>{renderLinks()}</nav>
+      </div>
       <div className="nav">
         <Brand />
-        <nav>
-          <a href="#overview" className="nav-link">
-            overview
-          </a>
-          <a href="#contagion" className="nav-link">
-            contagion
-          </a>
-          <a href="#symptoms" className="nav-link">
-            symptoms
-          </a>
-          <a href="#prevention" className="nav-link">
-            prevention
-          </a>
-          <a href="#contact" className="contactBtn">
-            contact
-          </a>
-        </nav>
+        <nav>{renderLinks()}</nav>
       </div>
     </header>
   );
