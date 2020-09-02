@@ -2,15 +2,18 @@ import React from 'react';
 
 import Brand from '../../utils/Brand.jsx';
 
+import renderLinks from './links';
+
 const Footer = () => {
   return (
     <footer>
       <Brand />
       <ul>
-        <li>overview</li>
+        {renderLinks('li')}
+        {/* <li>overview</li>
         <li>symptoms</li>
         <li>prevention</li>
-        <li>treatment</li>
+        <li>treatment</li> */}
       </ul>
       <ul>
         <li>

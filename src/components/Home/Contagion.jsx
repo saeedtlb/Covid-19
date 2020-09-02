@@ -2,7 +2,10 @@ import React from 'react';
 
 import Title from '../utils/Title';
 
+import Scroll from 'react-scroll';
+
 const Contagion = () => {
+  const Element = Scroll.Element;
   const cards = [
     {
       pic: '/images/airtransmission.png',
@@ -37,14 +40,14 @@ const Contagion = () => {
     ));
 
   return (
-    <div className="container">
+    <Element className="container" name="contagion">
       <Title
         header="contagion"
         description="Corona viruses are a type of virus. There are many different kinds,
             and some cause disease. A newly identified type"
       />
       <div className="cards">{renderCards()}</div>
-    </div>
+    </Element>
   );
 };
 

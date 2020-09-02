@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react';
 
+import Scroll from 'react-scroll';
+
 import { validate } from '../utils/misc';
 
 const Contact = () => {
+  const Element = Scroll.Element;
   const ref = useRef(null);
   const [show, setShow] = useState([false, '', '']);
 
@@ -19,7 +22,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
+    <Element className="contact" name="contact">
       <div className="wrapper">
         <h1>
           have question in mind?
@@ -36,7 +39,7 @@ const Contact = () => {
           </div>
         ) : null}
       </div>
-    </div>
+    </Element>
   );
 };
 

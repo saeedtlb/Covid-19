@@ -304,7 +304,7 @@ header nav .contactBtn {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  height: 90vh;
+  height: 70vh;
   background: linear-gradient(72deg, white 0%, #ffe8e8 100%);
 }
 
@@ -569,6 +569,10 @@ footer ul {
   text-transform: capitalize;
   list-style-type: none;
   color: #035755;
+}
+
+footer ul li {
+  cursor: pointer;
 }
 
 footer .logo + ul {

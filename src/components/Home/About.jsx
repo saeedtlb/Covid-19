@@ -1,8 +1,11 @@
 import React from 'react';
 
+import Scroll from 'react-scroll';
+
 const About = () => {
+  const Element = Scroll.Element;
   return (
-    <div className="about">
+    <Element className="about" name="about">
       <div className="description">
         <div className="text">
           <div>
@@ -18,7 +21,7 @@ const About = () => {
           <button>learn more</button>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

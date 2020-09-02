@@ -2,7 +2,10 @@ import React from 'react';
 
 import Title from '../utils/Title';
 
+import Scroll from 'react-scroll';
+
 const WhatToDo = () => {
+  const Element = Scroll.Element;
   const orders = [
     {
       pic: '/images/Mask.png',
@@ -49,13 +52,13 @@ const WhatToDo = () => {
     ));
 
   return (
-    <div className="toDo">
+    <Element className="toDo" name="prevention">
       <Title
         header="what should wee do"
         description="Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused"
       />
       <div className="orders">{renderOrders()}</div>
-    </div>
+    </Element>
   );
 };
 

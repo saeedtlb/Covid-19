@@ -22,6 +22,10 @@ footer {
     text-transform: capitalize;
     list-style-type: none;
     color: $grass;
+
+    li {
+      cursor: pointer;
+    }
   }
 
   .logo + ul {
