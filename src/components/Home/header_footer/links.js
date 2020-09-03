@@ -15,15 +15,38 @@ const goTo = (name) => {
 };
 
 export default (Name) => {
-  const newLinks = Name === 'a' ? links : links.slice(0, links.length - 1);
-  return newLinks.map((link) => (
-    <Name
-      key={link}
-      href={`#${link}`}
-      className={link === 'contact' ? 'contactBtn' : 'nav-link'}
-      onClick={(e) => goTo(e.target.textContent)}
-    >
-      {link}
-    </Name>
-  ));
+  return links.map(
+    (link) =>
+      link !== 'contact' ? (
+        <Name
+          key={link}
+          href={`#${link}`}
+          className="nav-link"
+          onClick={(e) => goTo(e.target.textContent)}
+        >
+          {link}
+        </Name>
+      ) : (
+        <div
+          className="button-container-1"
+          key={link}
+          href={`#${link}`}
+          onClick={(e) => goTo(e.target.textContent)}
+          style={{ marginTop: '0' }}
+        >
+          <span className="mas" style={{ color: '#035755' }}>
+            {link}
+          </span>
+          <button type="button">{link}</button>
+        </div>
+      )
+    // <Name
+    //   key={link}
+    //   href={`#${link}`}
+    //   className={link === 'contact' ? 'contactBtn' : 'nav-link'}
+    //   onClick={(e) => goTo(e.target.textContent)}
+    // >
+    //   {link}
+    // </Name>
+  );
 };

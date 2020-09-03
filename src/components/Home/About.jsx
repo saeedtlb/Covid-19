@@ -18,7 +18,10 @@ const About = () => {
             M.S., the director of operations with the Johns Hopkins Office of
             Critical Event Preparedness and Response
           </p>
-          <button>learn more</button>
+          <div className="button-container-1">
+            <span className="mas">learn more</span>
+            <button type="button">learn more</button>
+          </div>
         </div>
       </div>
     </Element>

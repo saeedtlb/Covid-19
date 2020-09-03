@@ -24,9 +24,17 @@
       margin-right: 0;
     }
     button {
-      width: 200px;
-      height: 50px;
-      @include button(true, #fee6e5, $virus);
+      //   width: 200px;
+      //   height: 50px;
+      //   @include button(true, #fee6e5, $virus);
+      @include button(
+        #000,
+        '/images/nature-sprite.png',
+        2300%,
+        100%,
+        rgb(3, 87, 85),
+        #fff
+      );
     }
 
     &::after {

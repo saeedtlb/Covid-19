@@ -59,7 +59,15 @@ header {
     .contactBtn {
       text-transform: capitalize;
       width: 100px;
-      @include button(false, $virus);
+      //   @include button(false, $virus);
+      @include button(
+        #000,
+        '/images/nature-sprite.png',
+        2300%,
+        100%,
+        rgb(3, 87, 85),
+        #fff
+      );
     }
   }
 }

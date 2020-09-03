@@ -100,18 +100,9 @@ footer,
   line-height: 190%;
 }
 
-.home .text button, .about .text button {
-  border: none;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: 600;
-  border-radius: 30px;
-  white-space: nowrap;
-  cursor: pointer;
-  background: #fb4c47;
-  color: #fff;
+button,
+a {
+  outline: none;
 }
 
 .title {
@@ -154,6 +145,93 @@ header .logo h3, footer .logo h3 {
   font-weight: bold;
   position: absolute;
   bottom: -7px;
+}
+
+.button-container-1 {
+  position: relative;
+  width: 150px;
+  height: 60px;
+  margin-top: 6vh;
+  overflow: hidden;
+  border: 1px solid;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300 !important;
+  font-size: 20px !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+}
+
+.button-container-1 button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  text-transform: capitalize;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: tomato;
+  -webkit-mask: url("/images/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  border: 1px solid #035755;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.8s steps(22) forwards;
+          animation: ani2 0.8s steps(22) forwards;
+}
+
+.button-container-1 button:hover {
+  -webkit-animation: ani 0.8s steps(22) forwards;
+          animation: ani 0.8s steps(22) forwards;
+}
+
+.button-container-1 .mas {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  width: 101%;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  margin-top: 17px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+  }
 }
 
 header {
@@ -238,16 +316,11 @@ header nav .nav-link:hover::after {
 header nav .contactBtn {
   text-transform: capitalize;
   width: 100px;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: 600;
-  border-radius: 30px;
-  white-space: nowrap;
-  cursor: pointer;
-  border: 2px solid #fb4c47;
-  color: #fb4c47;
+  background: #000;
+  -webkit-mask: url("/images/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  border: 1px solid #035755;
+  color: #fff;
 }
 
 @media only screen and (max-width: 1550px) {
@@ -417,18 +490,11 @@ header nav .contactBtn {
 }
 
 .about .text button {
-  width: 200px;
-  height: 50px;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: 600;
-  border-radius: 30px;
-  white-space: nowrap;
-  cursor: pointer;
-  background: #fb4c47;
-  color: #fee6e5;
+  background: #000;
+  -webkit-mask: url("/images/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  border: 1px solid #035755;
+  color: #fff;
 }
 
 .about .text::after {
