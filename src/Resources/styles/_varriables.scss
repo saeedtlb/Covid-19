@@ -6,7 +6,7 @@ $virus: #fb4c47;
   background: $bcolor;
   -webkit-mask: url($url);
   -webkit-mask-size: $x1 $y1;
-  border: 1px solid $bor;
+  border: $bor;
   color: $col;
 }
 
@@ -113,7 +113,7 @@ a {
       '/images/nature-sprite.png',
       2300%,
       100%,
-      rgb(3, 87, 85),
+      none,
       #fff
     );
     cursor: pointer;

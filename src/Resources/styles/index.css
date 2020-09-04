@@ -174,7 +174,7 @@ header .logo h3, footer .logo h3 {
   background: tomato;
   -webkit-mask: url("/images/nature-sprite.png");
   -webkit-mask-size: 2300% 100%;
-  border: 1px solid #035755;
+  border: none;
   color: #fff;
   cursor: pointer;
   -webkit-animation: ani2 0.8s steps(22) forwards;
@@ -319,7 +319,7 @@ header nav .contactBtn {
   background: #000;
   -webkit-mask: url("/images/nature-sprite.png");
   -webkit-mask-size: 2300% 100%;
-  border: 1px solid #035755;
+  border: #035755;
   color: #fff;
 }
 
@@ -493,7 +493,7 @@ header nav .contactBtn {
   background: #000;
   -webkit-mask: url("/images/nature-sprite.png");
   -webkit-mask-size: 2300% 100%;
-  border: 1px solid #035755;
+  border: #035755;
   color: #fff;
 }
 
@@ -645,6 +645,9 @@ footer .logo + ul {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 600px;
   font-size: 22px;
   margin: 0 auto;
