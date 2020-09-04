@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import '../../Resources/styles/hamburger.css';
 
-const Hamburger = ({ links, checked }) => {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => checked(show), [show]);
-
+const Hamburger = ({ links, checked, status }) => {
   return (
     <div className="menu">
       <label>
-        <input type="checkbox" onClick={(e) => setShow(e.target.checked)} />
+        <input type="checkbox" onClick={(e) => checked(e.target.checked)} />
         <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="30" />
           <path className="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
@@ -21,7 +17,7 @@ const Hamburger = ({ links, checked }) => {
       {links ? (
         <nav
           style={{
-            transform: show ? 'translateY(0)' : 'translateY(-400px)',
+            transform: status ? 'translateY(0)' : 'translateY(-400px)',
           }}
         >
           {links()}

@@ -24,11 +24,8 @@
       margin-right: 0;
     }
     button {
-      //   width: 200px;
-      //   height: 50px;
-      //   @include button(true, #fee6e5, $virus);
       @include button(
-        #000,
+        tomato,
         '/images/nature-sprite.png',
         2300%,
         100%,

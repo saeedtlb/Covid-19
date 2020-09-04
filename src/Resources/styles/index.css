@@ -331,6 +331,9 @@ header nav .contactBtn {
 
 @media only screen and (max-width: 1280px) {
   header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
     padding-top: 0;
     height: 150px;
     -webkit-transition: all 2s ease-in-out;
@@ -423,7 +426,6 @@ header nav .contactBtn {
   }
   .home .text button {
     width: 40%;
-    height: 50px;
     min-width: 150px;
     padding: 0;
     display: block;
@@ -490,7 +492,7 @@ header nav .contactBtn {
 }
 
 .about .text button {
-  background: #000;
+  background: tomato;
   -webkit-mask: url("/images/nature-sprite.png");
   -webkit-mask-size: 2300% 100%;
   border: #035755;
@@ -563,7 +565,6 @@ header nav .contactBtn {
   }
   .about .description .text button {
     width: 40%;
-    height: 50px;
     min-width: 150px;
     padding: 0;
     display: block;

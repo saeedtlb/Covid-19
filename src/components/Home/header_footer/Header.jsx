@@ -16,7 +16,11 @@ const Header = () => {
         className="nav_list"
         style={{ background: status ? 'aliceblue' : 'transparent' }}
       >
-        <Hamburger links={() => renderLinks('a')} checked={checked} />
+        <Hamburger
+          links={() => renderLinks('a')}
+          checked={checked}
+          status={status}
+        />
       </div>
       <div className="nav">
         <Brand />
