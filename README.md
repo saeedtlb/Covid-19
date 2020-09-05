@@ -1,3 +1,7 @@
+## Description
+
+A single web app which notify people about Covid-19 and it fetchs data from api about cases in each country and show their status in a table and a world map. Also it's fully responsive for mobile, tablet, Desktop.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
